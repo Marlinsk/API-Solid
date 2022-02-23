@@ -1,7 +1,7 @@
 import { Bird } from "../../entities/Bird";
 import { IBirdRepository } from "../IBirdRepository";
 
-export class FakeDatabaseBirdRepository implements IBirdRepository {  
+export class FakeDatabaseBirdRepository implements IBirdRepository {
   private bird: Bird[] = [];
 
   async findByName(name: string): Promise<Bird> {
