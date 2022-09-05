@@ -2,8 +2,8 @@ version: "3.8"
 
 services:
   db:
-    build: .docker/postgres-image
-    container_name: solidrestapi-db
+    build: .docker/postgres
+    container_name: restapi-db
     restart: always
     tty: true
     ports:
@@ -12,4 +12,4 @@ services:
       - .docker/dbdata:/var/lib/postgres/data
     environment:
       - POSTGRES_PASSWORD=docker12674
-      - POSTGRES_DB=solidrestapi
+      - POSTGRES_DB=restapi
