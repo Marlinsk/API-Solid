@@ -19,10 +19,10 @@ export class EditPostController {
         .status(200)
         .json({
           message: "Post successfully updated in in dataset",
-          profile: post,
+          data: post,
         });
     } catch (error) {
-      return response.status(400).json({ error });
+      return response.json({ error });
     }
   }
 }

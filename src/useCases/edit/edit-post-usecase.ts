@@ -1,3 +1,5 @@
+import { PostEnity } from "../../entities/Post";
+import { handleError } from "../../errors/handeError";
 import { IPostRepository } from "../../repositories/IPostRepository";
 
 interface IEditPostRequest {
@@ -10,15 +12,15 @@ interface IEditPostRequest {
 export class EditPostUseCase {
   constructor(private postRepository: IPostRepository) { }
 
-  async execute({ id, title, text, imagefile }: IEditPostRequest) {
+  async execute({ id, title, text, imagefile }: IEditPostRequest): Promise<PostEnity> {
     const checkID = await this.postRepository.findById(id);
 
     if (checkID === null) {
-      throw new Error("Not found!");
+      throw new handleError("Not found!", 404);
     }
 
     if (imagefile && !imagefile.startsWith('data:image/png;base64')) {
-      throw new Error('Invalid file format.');
+      throw new handleError('Invalid file format.', 415);
     }
 
     return await this.postRepository.update({

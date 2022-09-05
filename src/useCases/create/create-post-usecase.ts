@@ -1,3 +1,5 @@
+import { PostEnity } from "../../entities/Post";
+import { handleError } from "../../errors/handeError";
 import { IPostRepository } from "../../repositories/IPostRepository";
 
 interface ICreatePostRequest {
@@ -9,10 +11,10 @@ interface ICreatePostRequest {
 export class CreatePostUseCase {
   constructor(private postRepository: IPostRepository) { }
 
-  async execute({ title, text, imagefile }: ICreatePostRequest) {
+  async execute({ title, text, imagefile }: ICreatePostRequest): Promise<PostEnity> {
 
     if (imagefile && !imagefile.startsWith('data:image/png;base64')) {
-      throw new Error('Invalid sreenshot format.')
+      throw new handleError('Invalid file format.', 415);
     }
 
     return await this.postRepository.create({

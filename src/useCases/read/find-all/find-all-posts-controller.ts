@@ -9,9 +9,9 @@ export class FindAllPostsController {
       const posts = await this.findAllPostsUseCase.execute();
       return response
         .status(200)
-        .json({ message: "Request made successfully", profiles: posts });
+        .json({ message: "Request made successfully", data: posts });
     } catch (error) {
-      return response.status(400).json({ error });
+      return response.json({ error });
     }
   }
 }

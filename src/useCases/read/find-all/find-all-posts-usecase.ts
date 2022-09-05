@@ -1,4 +1,5 @@
 import { PostEnity } from "../../../entities/Post";
+import { handleError } from "../../../errors/handeError";
 import { IPostRepository } from "../../../repositories/IPostRepository";
 
 export class FindAllPostsUseCase {
@@ -8,7 +9,7 @@ export class FindAllPostsUseCase {
     const findAll = await this.postRepository.findAll();
 
     if (findAll.length === 0) {
-      throw new Error("No data found!");
+      throw new handleError("Not found", 404);
     }
 
     return findAll;

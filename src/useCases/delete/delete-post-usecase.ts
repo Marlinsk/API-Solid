@@ -1,13 +1,14 @@
+import { handleError } from "../../errors/handeError";
 import { IPostRepository } from "../../repositories/IPostRepository";
 
 export class DeletePostUseCase {
   constructor(private postRepository: IPostRepository) { }
 
-  async execute(id: string) {
+  async execute(id: string): Promise<void> {
     const checkID = await this.postRepository.findById(id);
 
     if (checkID === null) {
-      throw new Error("Not found!");
+      throw new handleError("Not found!", 404);
     }
 
     return await this.postRepository.delete(id);

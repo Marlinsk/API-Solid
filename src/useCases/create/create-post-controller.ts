@@ -15,10 +15,10 @@ export class CreatePostController {
         .status(201)
         .json({
           message: "Post successfully created in dataset",
-          profile: post,
+          data: post,
         });
     } catch (error) {
-      return response.status(400).json({ error });
+      return response.json({ error });
     }
   }
 }

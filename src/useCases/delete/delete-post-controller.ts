@@ -14,7 +14,7 @@ export class DeletePostController {
         profile: post,
       });
     } catch (error) {
-      return response.status(400).json({ error });
+      return response.json({ error });
     }
   }
 }
