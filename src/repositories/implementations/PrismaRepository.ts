@@ -23,14 +23,6 @@ export class PrismaRepository implements IPostRepository {
     });
   }
 
-  async findByTitle(title: string): Promise<PostEnity[] | null> {
-    return await prisma.post.findMany({
-      where: {
-        title
-      }
-    });
-  }
-
   async findAll(): Promise<PostEnity[]> {
     return await prisma.post.findMany();
   }
