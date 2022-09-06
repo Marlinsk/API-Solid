@@ -1,5 +1,5 @@
 import { PostEnity } from "../../entities/Post";
-import { handleError } from "../../errors/handleError";
+import { handleError } from "../../handles/errors/handleError";
 import { IPostRepository } from "../../repositories/IPostRepository";
 
 interface IEditPostRequest {
