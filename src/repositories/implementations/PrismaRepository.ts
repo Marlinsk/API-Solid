@@ -1,7 +1,7 @@
-import { ICreatePostDTO } from "../../useCases/create/ICreatePostDTO";
-import { IUpdatePostDTO } from "../../useCases/edit/IUpdatePostDTO";
+import { ICreatePostDTO } from "../../modules/create/ICreatePostDTO";
+import { IUpdatePostDTO } from "../../modules/edit/IUpdatePostDTO";
 import { PostEnity } from "../../entities/Post";
-import { prisma } from "../../prisma";
+import { prisma } from "../../database/prisma";
 import { IPostRepository } from "../IPostRepository";
 
 export class PrismaRepository implements IPostRepository {

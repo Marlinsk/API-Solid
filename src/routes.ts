@@ -1,8 +1,8 @@
 import { request, response, Router } from "express";
-import { createPostController } from "./useCases/create";
-import { deletePostController } from "./useCases/delete";
-import { editPostController } from "./useCases/edit";
-import { findAllPostsController } from "./useCases/read/find-all";
+import { createPostController } from "./modules/create";
+import { deletePostController } from "./modules/delete";
+import { editPostController } from "./modules/edit";
+import { findAllPostsController } from "./modules/read/find-all";
 
 const router = Router();
 

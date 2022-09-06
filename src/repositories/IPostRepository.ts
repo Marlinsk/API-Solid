@@ -1,5 +1,5 @@
-import { IUpdatePostDTO } from "../useCases/edit/IUpdatePostDTO";
-import { ICreatePostDTO } from "../useCases/create/ICreatePostDTO";
+import { IUpdatePostDTO } from "../modules/edit/IUpdatePostDTO";
+import { ICreatePostDTO } from "../modules/create/ICreatePostDTO";
 import { PostEnity } from "../entities/Post";
 
 export interface IPostRepository {
