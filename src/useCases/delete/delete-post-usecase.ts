@@ -1,4 +1,4 @@
-import { handleError } from "../../errors/handeError";
+import { handleError } from "../../errors/handleError";
 import { IPostRepository } from "../../repositories/IPostRepository";
 
 export class DeletePostUseCase {
