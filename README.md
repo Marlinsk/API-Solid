@@ -1,6 +1,29 @@
 # solid-node-backend
 Projeto muito muito simples, feito para estudo de programação com conceitos do SOLID na construção de API Rest feito com nodejs, typescript.
 
+## Sobre SOLID
+O SOLID é um conjunto de cinco princípios de design de software que foram introduzidos por Robert C. Martin e se tornaram fundamentais para o desenvolvimento de código de qualidade. Cada letra no acrônimo SOLID representa um princípio específico, e esses princípios são destinados a melhorar a legibilidade, manutenção e extensibilidade do código. 
+
+### Princípio da Responsabilidade Única (SRP - Single Responsibility Principle):
+- Este princípio afirma que uma classe deve ter uma única razão para mudar. Em outras palavras, uma classe deve ter uma responsabilidade bem definida e não deve ser sobrecarregada com múltiplas responsabilidades. Isso torna o código mais legível, facilita a manutenção e reduz o risco de efeitos colaterais.
+- O SRP promove a coesão, que é a ideia de que todas as funcionalidades relacionadas devem estar contidas em uma única unidade, como uma classe.
+
+### Princípio do Aberto/Fechado (OCP - Open/Closed Principle):
+- Este princípio estabelece que as entidades de software (classes, módulos, funções, etc.) devem estar abertas para extensão, mas fechadas para modificação. Em outras palavras, você deve ser capaz de estender o comportamento de uma entidade sem precisar alterar seu código-fonte.
+- Isso é alcançado por meio da herança, interfaces, ou métodos de extensão, permitindo que novos recursos sejam adicionados sem afetar o código existente.
+
+### Princípio da Substituição de Liskov (LSP - Liskov Substitution Principle):
+- O LSP define que objetos de subclasse devem poder ser usados no lugar de objetos da classe base sem afetar o comportamento esperado do programa.
+- Isso garante que a herança seja usada de forma consistente e que as subclasses respeitem a interface (métodos e propriedades) definida pela classe base.
+
+### Princípio da Segregação de Interface (ISP - Interface Segregation Principle):
+- O ISP afirma que uma classe não deve ser forçada a implementar interfaces que contenham métodos que não são relevantes para ela. Em vez disso, as interfaces devem ser específicas para os contextos em que são usadas.
+- Isso evita que as classes sejam sobrecarregadas com métodos desnecessários e promove a criação de interfaces mais coesas.
+
+### Princípio da Inversão de Dependência (DIP - Dependency Inversion Principle):
+- O DIP sugere que os módulos de alto nível não devem depender diretamente dos módulos de baixo nível. Ambos devem depender de abstrações. Além disso, detalhes devem depender de abstrações, e não o contrário.
+- Isso promove o desacoplamento entre módulos e permite que você injete dependências, em vez de criar dependências diretamente no código. Isso facilita a substituição de implementações e testes unitários.
+
 ## Tecnologias usadas
 - Javascript
 - Typescript
