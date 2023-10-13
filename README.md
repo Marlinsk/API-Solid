@@ -49,7 +49,7 @@ git clone https://github.com/Marlinsk/solid-node-backend.git
 cd solid-node-backend
 ```
 
-**3º passo: antes de usar o docker-compose up, crie um arquivo .env fora da pasta src e insira as seguintes variáveis.**
+**3º passo: antes de usar o docker-compose up, crie um arquivo .env fora da pasta src e insira a conexão do banco de dados.**
 ```bash
 DATABASE_URL="postgresql://USER:PASSWORD@HOST:PORT/DATABASE?schema=SCHEMA"
 ```
